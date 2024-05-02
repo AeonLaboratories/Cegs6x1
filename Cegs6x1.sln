@@ -5,6 +5,18 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cegs6x1", "Cegs6x1.csproj", "{438C502D-749C-41AA-AE66-8ED561485820}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeonHacs.Core", "..\AeonHacs.Core\AeonHacs.Core.csproj", "{892EFDFB-62F0-4787-9AD9-7F22F28F97EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AeonHacs.Wpf", "..\AeonHacs.Wpf\AeonHacs.Wpf.csproj", "{8C746767-FC30-4F7C-A9E6-C99B9276E440}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControls.Core", "..\..\WpfControls\WpfControls.Core\WpfControls.Core.csproj", "{AC70E8D2-010B-4FA1-A190-42B251DFF0D4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControls.Viewport", "..\..\WpfControls\WpfControls.Viewport\WpfControls.Viewport.csproj", "{073ECF54-EC57-4444-83B5-C60150A168FA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControls.NumericUpDown", "..\..\WpfControls\WpfControls.NumericUpDown\WpfControls.NumericUpDown.csproj", "{E073FAA7-46D3-4A43-8EF4-A2FCBCAC8FD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfControls.ColorPicker", "..\..\WpfControls\WpfControls.ColorPicker\WpfControls.ColorPicker.csproj", "{32D25948-384F-4226-A732-0202409FC366}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +27,30 @@ Global
 		{438C502D-749C-41AA-AE66-8ED561485820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{438C502D-749C-41AA-AE66-8ED561485820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{438C502D-749C-41AA-AE66-8ED561485820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892EFDFB-62F0-4787-9AD9-7F22F28F97EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892EFDFB-62F0-4787-9AD9-7F22F28F97EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892EFDFB-62F0-4787-9AD9-7F22F28F97EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892EFDFB-62F0-4787-9AD9-7F22F28F97EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C746767-FC30-4F7C-A9E6-C99B9276E440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C746767-FC30-4F7C-A9E6-C99B9276E440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C746767-FC30-4F7C-A9E6-C99B9276E440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C746767-FC30-4F7C-A9E6-C99B9276E440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC70E8D2-010B-4FA1-A190-42B251DFF0D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC70E8D2-010B-4FA1-A190-42B251DFF0D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC70E8D2-010B-4FA1-A190-42B251DFF0D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC70E8D2-010B-4FA1-A190-42B251DFF0D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{073ECF54-EC57-4444-83B5-C60150A168FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{073ECF54-EC57-4444-83B5-C60150A168FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{073ECF54-EC57-4444-83B5-C60150A168FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{073ECF54-EC57-4444-83B5-C60150A168FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E073FAA7-46D3-4A43-8EF4-A2FCBCAC8FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E073FAA7-46D3-4A43-8EF4-A2FCBCAC8FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E073FAA7-46D3-4A43-8EF4-A2FCBCAC8FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E073FAA7-46D3-4A43-8EF4-A2FCBCAC8FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D25948-384F-4226-A732-0202409FC366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D25948-384F-4226-A732-0202409FC366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D25948-384F-4226-A732-0202409FC366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D25948-384F-4226-A732-0202409FC366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

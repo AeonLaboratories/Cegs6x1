@@ -1,7 +1,7 @@
 @echo off
 C:
 CD \Programs\AeonLaboratories\Cegs6x1
-if [%1]==[] %0 C:\Data\Source\DevStudio\Cegs6x1\bin\Release\netcoreapp3.1
+if [%1]==[] %0 C:\Data\Source\DevStudio\Cegs6x1\bin\Release
 copy "%*\*.exe" > nul
 copy "%*\*.dll" > nul
 copy "%*\*.config" > nul
