@@ -28,7 +28,11 @@
 		<PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>		
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<ApplicationIcon>keg.ico</ApplicationIcon>
 	</PropertyGroup>
+	<ItemGroup>
+	  <Content Include="keg.ico" />
+	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\..\WpfControls\WpfControls.ColorPicker\WpfControls.ColorPicker.csproj" />
 	  <ProjectReference Include="..\..\WpfControls\WpfControls.Core\WpfControls.Core.csproj" />

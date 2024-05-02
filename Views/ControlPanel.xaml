@@ -25,7 +25,7 @@
     <!--==============================================-->
     <Grid>
         <!-- Simplify references to Cegs properties -->
-        <v:View x:Name="Cegs" Component="CEGS12X" Visibility="Collapsed" />
+        <v:View x:Name="Cegs" Component="Cegs12X" Visibility="Collapsed" />
 
         <!-- System Uptime -->
         <StackPanel Margin="10" HorizontalAlignment="Left" VerticalAlignment="Top">

@@ -1,5 +1,5 @@
 {
-  "Name": "CEGS12X",
+  "Name": "Cegs12X",
   "AlertManager": {
     "Name": "AlertManager",
     "MinutesToSuppressSameMessage": 1440,
