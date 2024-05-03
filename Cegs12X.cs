@@ -18,8 +18,8 @@ namespace AeonHacs.Components
 
             SampleLog = Find<HacsLog>("SampleLog");
 
-            VMPressureLog = Find<DataLog>("VMPressureLog");
-            VMPressureLog.Changed = (col) => col.Resolution > 0 && col.Source is Manometer m ?
+            VM1PressureLog = Find<DataLog>("VM1PressureLog");
+            VM1PressureLog.Changed = (col) => col.Resolution > 0 && col.Source is Manometer m ?
                 (col.PriorValue is double p ?
                     Manometer.SignificantChange(p, m.Pressure) :
                     true) :
@@ -105,7 +105,7 @@ namespace AeonHacs.Components
 
             Power = Find<Power>("Power");
             Ambient = Find<Chamber>("Ambient");
-            VacuumSystem = Find<VacuumSystem>("VacuumSystem");
+            VacuumSystem1 = Find<VacuumSystem>("VacuumSystem1");
 
             IM = Find<Section>("IM");
             VTT = Find<Section>("VTT");
@@ -181,7 +181,7 @@ namespace AeonHacs.Components
             if (Busy) return;
 
             // ensure baseline VM pressure & steady state
-            if (VacuumSystem.TimeAtBaseline.TotalSeconds < 20)
+            if (VacuumSystem1.TimeAtBaseline.TotalSeconds < 20)
                 return;
 
             if (MC?.PathToVacuum?.IsOpened() ?? false)
@@ -289,20 +289,20 @@ namespace AeonHacs.Components
             ProcessSubStep.Start("Close gas supplies");
             foreach (GasSupply g in GasSupplies.Values)
             {
-                if (g.Destination.VacuumSystem == VacuumSystem)
+                if (g.Destination.VacuumSystem == VacuumSystem1)
                     g.ShutOff();
             }
 
             // close gas flow valves after all shutoff valves are closed
             foreach (GasSupply g in GasSupplies.Values)
             {
-                if (g.Destination.VacuumSystem == VacuumSystem)
+                if (g.Destination.VacuumSystem == VacuumSystem1)
                     g.FlowValve?.CloseWait();
             }
 
             ProcessSubStep.End();
 
-            Evacuate(OkPressure);
+            VacuumSystem1.Evacuate(OkPressure);
 
             Clean(VTT);
             Clean(CT);
@@ -314,7 +314,7 @@ namespace AeonHacs.Components
 
             if (gmWasOpened && mcWasOpened && ctWasOpened && imWasOpened && IM_CT.IsOpened && VTT_MC.IsOpened)
             {
-                Evacuate();
+                VacuumSystem1.Evacuate();
                 ProcessStep.End();
                 return;
             }
@@ -322,7 +322,7 @@ namespace AeonHacs.Components
             if (!mcWasOpened)
             {
                 ProcessSubStep.Start($"Evacuate {MC_Split.Name}");
-                VacuumSystem.IsolateManifold();
+                VacuumSystem1.IsolateManifold();
                 MC_Split.OpenAndEvacuateAll(OkPressure);        // include MC aliquot ports
                 ProcessSubStep.End();
             }
@@ -330,7 +330,7 @@ namespace AeonHacs.Components
             if (!gmWasOpened)
             {
                 ProcessSubStep.Start($"Evacuate {GM.Name} and prepared GRs");
-                VacuumSystem.IsolateManifold();
+                VacuumSystem1.IsolateManifold();
                 GM.Isolate();
                 OpenPreparedGRs();
                 GM.OpenAndEvacuate(OkPressure);
@@ -344,7 +344,7 @@ namespace AeonHacs.Components
             if (!ctWasOpened)
             {
                 ProcessSubStep.Start($"Evacuate {CT_VTT.Name}");
-                VacuumSystem.IsolateManifold();
+                VacuumSystem1.IsolateManifold();
                 CT_VTT.OpenAndEvacuate(OkPressure);
                 ProcessSubStep.End();
             }
@@ -352,7 +352,7 @@ namespace AeonHacs.Components
             if (!imWasOpened)
             {
                 ProcessSubStep.Start($"Evacuate {IM.Name}");
-                VacuumSystem.IsolateManifold();
+                VacuumSystem1.IsolateManifold();
                 IM.OpenAndEvacuate(OkPressure);
                 ProcessSubStep.End();
             }
@@ -392,7 +392,7 @@ namespace AeonHacs.Components
             im.OpenAndEvacuate();
             Split.OpenAndEvacuate();
             im.PathToVacuum.Open();
-            WaitForStablePressure(CleanPressure);
+            im.VacuumSystem.WaitForStablePressure(CleanPressure);
             InletPort.Close();
             ProcessStep.End();
 
@@ -405,7 +405,7 @@ namespace AeonHacs.Components
             WaitFor(() => mc.Temperature > CO2TransferStartTemperature);
             ProcessSubStep.End();
 
-            VacuumSystem.Isolate();
+            VacuumSystem1.Isolate();
             MC_Split.Open();
             WaitSeconds(3);
             InletPort.Open();
@@ -528,7 +528,7 @@ namespace AeonHacs.Components
         protected virtual void FastOpenLine()
         {
             CloseAllGRs();
-            VacuumSystem.Isolate();
+            VacuumSystem1.Isolate();
             IM.Open();
             GM.Open();
 
@@ -540,7 +540,7 @@ namespace AeonHacs.Components
             MC.PathToVacuum?.Open();     // Opens GM, too
             VTT.PathToVacuum?.Open();
             IM.PathToVacuum?.Open();
-            VacuumSystem.Evacuate();
+            VacuumSystem1.Evacuate();
         }
 
         protected void CalibrateManualHeaters()

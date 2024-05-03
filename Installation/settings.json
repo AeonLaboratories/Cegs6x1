@@ -7641,9 +7641,9 @@
     }
   },
   "VacuumSystems": {
-    "VacuumSystem": {
+    "VacuumSystem1": {
       "$type": "AeonHacs.Components.VacuumSystem, AeonHacs.Core",
-      "Name": "VacuumSystem",
+      "Name": "VacuumSystem1",
       "TurboPump": null,
       "RoughingPump": null,
       "Manometer": "pVM",
@@ -8589,7 +8589,7 @@
         "VM"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -8621,7 +8621,7 @@
         "IP5",
         "IP6"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vIMR_IMC",
         "vIMC_CT",
@@ -8651,7 +8651,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vIML_IMC",
         "vIMC_CT",
@@ -8688,7 +8688,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vIMC_CT",
         "vIMC_VM"
@@ -8710,7 +8710,7 @@
         "CT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vIMC_CT",
         "vCT_VTT",
@@ -8730,7 +8730,7 @@
         "VTT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vCT_VTT",
         "vVTT_MC"
@@ -8755,7 +8755,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vMC_Split"
@@ -8779,7 +8779,7 @@
         "Split"
       ],
       "Ports": [],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vMC_Split",
         "vGML_GMC",
@@ -8811,7 +8811,7 @@
         "GR5",
         "GR6"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vGMR_GMC",
         "vSplit_GMC",
@@ -8841,7 +8841,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vGML_GMC",
         "vSplit_GMC",
@@ -8878,7 +8878,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vSplit_GMC",
         "vGMC_VM"
@@ -8918,7 +8918,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vMC_Split",
         "vCT_VM",
@@ -8959,7 +8959,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vCT_VTT",
         "vCT_VM",
@@ -8983,7 +8983,7 @@
         "VTT"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vIMC_CT",
         "vVTT_MC",
@@ -9010,7 +9010,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vCT_VTT",
         "vMC_Split"
@@ -9040,7 +9040,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vSplit_GMC"
@@ -9084,7 +9084,7 @@
         "MCP1",
         "MCP2"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vGMC_VM"
@@ -9118,7 +9118,7 @@
         "GR5",
         "GR6"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vGMR_GMC",
@@ -9152,7 +9152,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vGML_GMC",
@@ -9178,7 +9178,7 @@
         "MCP2"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vMC_Split"
@@ -9209,7 +9209,7 @@
         "GMC"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vGML_GMC",
@@ -9254,7 +9254,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vVTT_MC",
         "vGMC_VM"
@@ -9294,7 +9294,7 @@
         "IP11",
         "IP12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -9338,7 +9338,7 @@
         "GR11",
         "GR12"
       ],
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -9368,7 +9368,7 @@
         "Split"
       ],
       "Ports": null,
-      "VacuumSystem": "VacuumSystem",
+      "VacuumSystem": "VacuumSystem1",
       "Isolation": [
         "vHe_VM",
         "vH2_VM",
@@ -10087,9 +10087,9 @@
       "TimeStampFormat": "MM/dd/yyyy HH:mm:ss.fff\t",
       "ArchiveDaily": true
     },
-    "VMPressureLog": {
+    "VM1PressureLog": {
       "$type": "AeonHacs.Components.DataLog, AeonHacs.Core",
-      "Name": "VMPressureLog",
+      "Name": "VM1PressureLog",
       "InsertLatestSkippedEntry": false,
       "Columns": [
         {
